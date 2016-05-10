@@ -1,3 +1,9 @@
+<!-- Bloviations Section -->
+<section id="bloviations">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+
 {{!-- Previous/next page links - only displayed on page 2+ --}}
 <div class="extra-pagination inner">
     {{pagination}}
@@ -9,9 +15,9 @@
     <header class="post-header">
         <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
     </header>
-    <section class="post-excerpt">
+    <div class="post-excerpt">
         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
+    </div>
     <footer class="post-meta">
         {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
         {{author}}
@@ -23,3 +29,8 @@
 
 {{!-- Previous/next page links - displayed on every page --}}
 {{pagination}}
+
+            </div>
+        </div>
+    </div
+</section>
