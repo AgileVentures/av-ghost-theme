@@ -9,6 +9,10 @@
     word-wrap: break-word;
 }
 
+.post-content{
+    text-align: left;
+}
+
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 .post:after {

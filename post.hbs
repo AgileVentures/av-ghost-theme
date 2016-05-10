@@ -1,33 +1,24 @@
 {{!< default}}
-
+{{> "nav"}}
 {{!-- The comment above "< default" means - insert everything in this file into
     the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
-
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
-        {{/if}}
-    </nav>
-</header>
-
+<section>
 <main class="content" role="main">
     <article class="{{post_class}}">
 
-        <header class="post-header">
+        <div class="post-header">
             <h1 class="post-title">{{title}}</h1>
-            <section class="post-meta">
+            <div class="post-meta">
                 <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
-        </header>
+            </div>
+        </div>
 
-        <section class="post-content">
+        <div class="post-content">
             {{content}}
-        </section>
+        </div>
 
         <footer class="post-footer">
 
@@ -40,7 +31,7 @@
             </figure>
             {{/if}}
 
-            <section class="author">
+            <div class="author">
                 <h4><a href="{{url}}">{{name}}</a></h4>
 
                 {{#if bio}}
@@ -52,11 +43,11 @@
                     {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
                     {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
                 </div>
-            </section>
+            </div>
 
         {{/author}}
 
-            <section class="share">
+            <div class="share">
                 <h4>Share this post</h4>
                 <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -70,16 +61,16 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
-            </section>
+            </div>
 
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
-            <section class="gh-subscribe">
+            <div class="gh-subscribe">
                 <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
                 <p>Get the latest posts delivered right to your inbox.</p>
                 {{subscribe_form placeholder="Your email address"}}
                 <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
-            </section>
+            </div>
             {{/if}}
 
         </footer>
@@ -106,5 +97,6 @@
     </a>
     {{/prev_post}}
 </aside>
+</section>
 
 {{/post}}
