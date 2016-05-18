@@ -61,7 +61,6 @@ body:not(.post-template) .post-title {
 .author-thumb {
     width: 24px;
     height: 24px;
-    float: left;
     margin-right: 9px;
     border-radius: 100%;
 }
