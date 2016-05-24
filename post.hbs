@@ -27,17 +27,17 @@
 
             {{#if image}}
             <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                <a class="img" href="{{url}}#blog" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
             </figure>
             {{/if}}
 
             <div class="author">
-                <h4><a href="{{url}}">{{name}}</a></h4>
+                <h4><a href="{{url}}#blog">{{name}}</a></h4>
 
                 {{#if bio}}
                     <p>{{bio}}</p>
-                {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                {{else}}    
+                    <p>Read <a href="{{url}}#blog">more posts</a> by this author.</p>
                 {{/if}}
                 <div class="author-meta">
                     {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
