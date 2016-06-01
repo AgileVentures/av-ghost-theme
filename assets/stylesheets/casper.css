@@ -303,3 +303,7 @@ body:not(.post-template) .post-title {
     display: block;
 }
 
+a.email {
+    vertical-align: 32%; 
+}
+
