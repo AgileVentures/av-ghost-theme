@@ -306,4 +306,10 @@ body:not(.post-template) .post-title {
 a.email {
     vertical-align: 32%; 
 }
+a.email:hover,
+ a.email:focus,
+ a.email:active
+ a.active.email{
+    color: #ee7335;
+ }
 
