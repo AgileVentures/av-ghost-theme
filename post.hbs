@@ -61,6 +61,8 @@
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
+                <i class="fa fa-lg"><a class="fa fa-envelope fa-lg Email" href="mailto:?&subject={{encode @blog.title}}%3A%20{{encode title}}&body={{encode title}}%0D%0A{{url absolute="true"}}%0D%0A%0D%0A{{excerpt words="45"}}%2E%2E%2E">  
+                </a></i>
             </div>
 
             {{!-- Email subscribe form at the bottom of the page --}}
